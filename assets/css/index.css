@@ -421,25 +421,25 @@ li {
         transform: translate(calc(-25vw * 9));
     }
 }
+@keyframes scrollReverse {
+    0% {
+        transform: translate(calc(-25vw * 9));
+    }
+    100% {
+        transform: translate(0);
+    }
+}
 
 .slide-track1 {
     display: flex;
     width: calc(25vw * 18);
-    animation: scrolling 30s linear infinite alternate-reverse;
+    animation: scrollReverse 30s linear infinite;
 }
 
 .slide-track1:hover {
     animation-play-state: paused;
 }
 
-@keyframes scrolling {
-    0% {
-        transform: translate(0);
-    }
-    100% {
-        transform: translate(calc(-25vw * 9));
-    }
-}
 
 .slide {
     height: 20vw;
@@ -736,6 +736,7 @@ li {
 .nft .nft-slide {
     display: flex;
     align-items: center;
+    gap: 1vw;
     justify-content: space-between;
     width: 100%;
     /* animation: scrolling-2 17s linear infinite forwards; */
